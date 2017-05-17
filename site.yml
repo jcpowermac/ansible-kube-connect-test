@@ -1,0 +1,10 @@
+- name: kube test
+  connection: kubernetes
+  hosts: all
+  gather_facts: False
+  tasks:
+    - name: raw_module
+      raw: date
+
+    - name: command_module
+      command: date
