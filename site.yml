@@ -1,10 +1,14 @@
 - name: kube test
   connection: kubernetes
   hosts: all
-  gather_facts: False
+  gather_facts: True
   tasks:
-    - name: raw_module
-      raw: date
+    #    - name: raw_module
+    #  raw: date
+
+    - name: debug
+      debug:
+        msg: "{{ hostvars[inventory_hostname] }}"
 
     - name: command_module
-      command: date
+      command: "echo hello"

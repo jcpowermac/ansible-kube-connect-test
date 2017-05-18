@@ -1,0 +1,10 @@
+- name: kube test
+  connection: local
+  hosts: localhost
+  gather_facts: False
+  tasks:
+    - name: raw_module
+      raw: date
+
+    - name: command_module
+      command: "echo hello"
