@@ -3,8 +3,8 @@
   hosts: all
   gather_facts: True
   tasks:
-    #    - name: raw_module
-    #  raw: date
+    - name: raw_module
+      raw: date
 
     - name: debug
       debug:
@@ -12,3 +12,15 @@
 
     - name: command_module
       command: "echo hello"
+
+    - name: Files
+      file:
+        path: "/opt/app-root"
+        recurse: yes
+
+    - name: find files
+      find:
+        path: "/opt/app-root"
+        recurse: yes
+
+
