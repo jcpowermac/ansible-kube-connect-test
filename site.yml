@@ -1,6 +1,6 @@
 - name: kube test
   connection: kubernetes
-  hosts: all
+  hosts: pods
   gather_facts: True
   tasks:
     - name: raw_module
