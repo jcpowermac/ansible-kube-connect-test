@@ -1,6 +1,5 @@
 - name: kube test
-  connection: kubernetes
-  hosts: pods
+  hosts: kube-ansible
   gather_facts: True
   tasks:
     - name: raw_module

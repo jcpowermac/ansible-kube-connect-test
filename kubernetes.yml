@@ -1,0 +1,21 @@
+---
+contexts:
+  #  - name: "openshift_virtomation_com"
+  #    server: "openshift.virtomation.com"
+  #    port: 8443
+  #    username: "jcallen"
+  #    token: "EMrjCngWnOktMR2VQ9OBeLWVLtdbOhqhCnpZ9C_oewI"
+  #    local_kube_config: False
+  #    namespaces:
+  #      - "kube-ansible"
+  #      - "osphaci"
+  #      - "foo"
+#  - name: "local_kube_config"
+#    local_kube_config: True
+#    namespaces:
+#      - "kube-ansible"
+  - name: "kube_config_path"
+    local_kube_config: False
+    kubernetes_config_file: "/home/jcallen/.kube/config"
+    namespaces:
+      - "kube-ansible"
