@@ -1,0 +1,25 @@
+- name: kube test
+  hosts: pods
+  gather_facts: True
+  tasks:
+    - name: raw_module
+      raw: date
+
+    - name: debug
+      debug:
+        msg: "{{ hostvars[inventory_hostname] }}"
+
+    - name: command_module
+      command: "echo hello"
+
+    - name: Files
+      file:
+        path: "/opt/app-root"
+        recurse: yes
+
+    - name: find files
+      find:
+        path: "/opt/app-root"
+        recurse: yes
+
+
