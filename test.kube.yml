@@ -1,4 +1,5 @@
 ---
+plugin: kubernetes
 contexts:
   #  - name: "openshift_virtomation_com"
   #    server: "openshift.virtomation.com"

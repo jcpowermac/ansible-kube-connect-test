@@ -39,6 +39,7 @@ COPY bin/ ${APP_ROOT}/bin/
 RUN chmod -R ug+x ${APP_ROOT}/bin ${APP_ROOT}/etc /tmp/user_setup && \
     /tmp/user_setup
 
+EXPOSE 8000
 ####### Add app-specific needs below. #######
 ### Containers should NOT run as root as a good practice
 USER ${USER_UID}
