@@ -1,5 +1,5 @@
 - name: kube test
-  hosts: ansible-kube-connect-test-2-pjng4
+  hosts: kube-ansible
   gather_facts: True
   tasks:
     - name: raw_module
